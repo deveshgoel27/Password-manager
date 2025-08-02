@@ -1,28 +1,59 @@
-# Password-manager
-Secure credential storage app
+# 🔐 Password Manager
 
-express: For routing and middleware
+A full-stack Password Manager built with the MERN stack (MongoDB, Express, React, Node.js). This project allows users to securely store and manage their passwords.
 
-mongoose: To connect and interact with MongoDB
+## 🚧 Project Structure
 
-dotenv: To store secret keys in .env
-
-cors: To allow frontend to call the backend
-
-bcrypt: For hashing passwords
-
-jsonwebtoken: For secure login tokens
-
-crypto is built-in — no need to install it.
+password-manager/
+├── client/ # Frontend (React + TailwindCSS)
+├── server/ # Backend (Express + MongoDB)
+└── README.md # Project overview
 
 
-Folder/File	Purpose
-controllers/	Logic for handling routes (like register, login)
-models/	Mongoose schemas for MongoDB (User, Credential)
-routes/	Define Express routes (/auth, /credentials)
-middleware/	JWT auth checks, error handling, etc.
-.env	Store your secrets like DB URI, JWT key
-index.js	Starts your server and connects everything
+## ✅ Completed Phases
 
+- [x] Phase 1: Project Setup
 
+## 📦 Tech Stack
+
+- **Frontend**: React, Vite, TailwindCSS, React Router, Axios, React Hook Form, React Toastify
+- **Backend**: Express, MongoDB, Mongoose, Bcrypt, JWT, Crypto
+- **Dev Tools**: Nodemon, dotenv, GitHub
+
+## 🛠️ How to Run
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
+
+Frontend
+bash
+Copy
+Edit
+cd client
+npm install
+npm run dev
+🔒 Features (Planned)
+User Authentication
+
+Secure Password Storage
+
+CRUD Operations
+
+Copy to Clipboard
+
+Search and Filter
+
+Dark Mode
+
+Responsive UI
+
+🚀 Live Demo
+Coming soon...
+
+📅 Development Log
+Phase 1 completed ✅ (Project setup and folder structure)
 
