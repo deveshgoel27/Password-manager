@@ -1,16 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const isAuthenticated = !!localStorage.getItem('token');
 
   return (
-    <>
-      <h1 className="text-4xl text-purple-600 font-bold">Tailwind is working!</h1>
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route
+        path="/dashboard"
+        element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+      />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
