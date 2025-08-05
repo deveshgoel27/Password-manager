@@ -1,11 +1,11 @@
 # 🔐 Password Manager
 
-A full-stack Password Manager built with the MERN stack (MongoDB, Express, React, Node.js). This project allows users to securely store and manage their passwords.
+A full-stack Password Manager built with the MERN stack (MongoDB, Express, React, Node.js).  
+This app allows users to securely register, log in, and (soon) store/manage passwords.
 
 ---
 
 ## 📁 Project Structure
-
 ```
 password-manager/
 ├── client/ # Frontend (React + TailwindCSS)
@@ -15,15 +15,19 @@ password-manager/
 
 ---
 
+
+---
+
 ## ✅ Completed Phases
-- [x] Phase 1: Project Setup
-- [x] Phase 2: Auth system, JWT, route protection
+
+- [x] **Phase 1:** Project Setup (Frontend & Backend with basic structure)
+- [x] **Phase 2:** Authentication System (Register/Login with JWT, Protected Routes)
 
 ---
 
 ## 📦 Tech Stack
 
-**Frontend**  
+### 🔹 Frontend
 - React  
 - Vite  
 - TailwindCSS  
@@ -32,27 +36,27 @@ password-manager/
 - React Hook Form  
 - React Toastify  
 
-**Backend**  
+### 🔹 Backend
 - Express  
 - MongoDB + Mongoose  
-- Bcrypt  
+- Bcrypt (password hashing)  
 - JWT (jsonwebtoken)  
-- Crypto  
+- Crypto (for password encryption – planned)  
 
-**Dev Tools**  
+### 🔹 Dev Tools
 - Nodemon  
 - Dotenv  
 - Git + GitHub  
 
 ---
 
-## 📂 Folder / File Purpose
+## 📂 Folder / File Structure
 
-- `controllers/` – Logic for handling routes (like register, login)  
-- `models/` – Mongoose schemas for MongoDB (User, Credential)  
-- `routes/` – Define Express routes (`/auth`, `/credentials`)  
-- `middleware/` – JWT auth checks, error handling, etc.  
-- `.env` – Store your secrets like DB URI, JWT key  
+- `/controllers` – Logic for handling routes (like register, login)  
+- `/models` – Mongoose schemas for MongoDB (User, Credential)  
+- `/routes` – Define Express routes (`/auth`, `/credentials`)  
+- `/middleware` – JWT auth checks, error handling, etc.  
+- `.env` – Store your secrets like DB URI, JWT secret  
 - `index.js` – Starts your server and connects everything  
 
 ---
@@ -64,29 +68,36 @@ password-manager/
 ```bash
 git clone https://github.com/your-username/password-manager.git
 cd password-manager
-```
+
 
 ### 2. Setup the backend
 
-```bash
 cd server
 npm install
-# Create a .env file with MONGO_URI and JWT_SECRET
+# Create a .env file with:
+# MONGO_URI=your_mongodb_uri
+# JWT_SECRET=your_secret_key
 npm start
-```
 
 ### 3. Setup the frontend
 
-```bash
 cd ../client
 npm install
 npm run dev
-```
 
 ---
 
+ Git Workflow
+
+git add .
+git commit -m "✅ Complete Phase 2: Auth system, JWT, route protection"
+git push
+
+  ---
+
 ## 🔒 Features (Planned)
 
+✅ Completed (Phase 1)
 - User authentication (register/login)
 - Secure password encryption
 - Add / Edit / Delete passwords
@@ -94,6 +105,16 @@ npm run dev
 - Search functionality
 - Dark mode
 - Responsive UI
+
+✅ Completed (Phase 2)
+User Registration (/api/auth/register)
+User Login (/api/auth/login)
+JWT Token generation and storage
+Protected backend routes using middleware
+Auto-redirect to dashboard on login
+Token saved in localStorage
+
+
 
 ---
 
@@ -103,21 +124,8 @@ Coming soon...
 
 ---
 
-## 📅 Development Log
 
-✅ Phase 1: Initial project setup  
-✅ Phase 2: User authentication (JWT, route protection)  
-⏳ Phase 3: Password management (CRUD)  
-⏳ Phase 4: UI Enhancements and final deployment  
 
----
 
-## 📌 Git Commands to Use After Each Phase
-
-```bash
-git add .
-git commit -m "✅ Complete Phase X: Your message"
-git push
-```
 
 Now you're clean and ready for the next push! 🚀
